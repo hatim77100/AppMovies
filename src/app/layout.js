@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import Header from "./components/Header/Header";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { roboto, montserrat } from "@/fonts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${roboto.variable} ${montserrat.variable}`}>
         <Header/>
         <main className={inter.className}>{children}</main>
       </body>

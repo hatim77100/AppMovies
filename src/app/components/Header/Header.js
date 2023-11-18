@@ -1,17 +1,14 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import { Roboto } from "next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["100", "300"] });
-
 const Header = () => {
   return (
-    <header className={`${styles.header} ${roboto.className}`}>
-      <div>
+    <header className={`${styles.header}`}>
+      <div className={styles.logo}>
         <p>MymMovieApp</p>
-        <div>
+        <div className={styles.navigation}>
           <nav>
             <ul>
               <li>Séries</li>
@@ -20,9 +17,9 @@ const Header = () => {
           </nav>
         </div>
       </div>
-      <input type="text" placeholder="Rechercher un titre..."/>
+      <input type="text" placeholder="Rechercher un titre..." />
       <div>
-        <FontAwesomeIcon icon={faUser}/>
+        <FontAwesomeIcon icon={faUser} />
       </div>
     </header>
   );
